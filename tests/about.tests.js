@@ -1,8 +1,9 @@
-const assert = require('assert');
-const fetch = require('node-fetch');
+const assert = require("assert");
+const fetch = require("node-fetch");
 
-suite('About page', function() {
-  test('Page title', async function() {
+// just a comment
+suite("About page", function () {
+  test("Page title", async function () {
     let res = await fetch("http://localhost:8888/about");
     let body = await res.text();
     assert.ok(body.includes("<title>About</title>"));
