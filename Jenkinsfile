@@ -9,9 +9,9 @@ pipeline {
    }
     stage('Parallel Execution') {
      parallel {
-        stage('Execute Tests') {
+        stage('Run npm audit tests') {
         steps {
-            bat 'npm test'
+            bat 'npm audit'
            }
         }
         stage('Execute Tests') {
